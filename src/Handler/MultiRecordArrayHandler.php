@@ -148,7 +148,7 @@ final class MultiRecordArrayHandler extends AbstractHandler
 
         $isForm = preg_grep('/application\/x-www-form-urlencoded/', $contentType);
         if (!empty($isForm)) {
-            $result = \GuzzleHttp\Psr7\parse_query($body);
+            $result = \GuzzleHttp\Psr7\Query::parse($body);
             $stream->rewind();
             return $result;
         }

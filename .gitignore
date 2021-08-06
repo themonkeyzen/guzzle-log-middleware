@@ -11,3 +11,4 @@ phpcs.xml
 
 ### Custom
 build
+.DS_Store
